@@ -1,0 +1,47 @@
+📊 Exploratory Data Analysis (EDA)
+EDA was performed to better understand the dataset, identify patterns, and detect anomalies before model building.
+
+1️⃣ Data Overview
+Rows: 303
+Columns: 14 (13 features + 1 target)
+No significant missing values detected.
+
+2️⃣ Target Variable Distribution
+0 (No Heart Disease): 138 samples
+1 (Heart Disease Present): 165 samples
+Dataset is slightly imbalanced but manageable.
+
+3️⃣ Univariate Analysis
+Numerical Features:
+Age ranges from 29 to 77 years with a mean of ~54 years.
+Cholesterol values vary widely, with some extreme outliers above 500 mg/dl.
+Maximum heart rate achieved (thalach) ranges between 71 and 202 bpm.
+
+Categorical Features:
+Chest pain type (cp) shows that type 0 is most common among patients with heart disease.
+Exercise-induced angina (exang) is more frequent in heart disease cases.
+
+4️⃣ Bivariate Analysis
+Patients with higher maximum heart rate (thalach) tend to have lower chances of heart disease.
+Oldpeak (ST depression) values are generally higher in patients with heart disease.
+Chest pain type is a strong differentiating feature — atypical angina and non-anginal pain occur more in healthy patients.
+
+5️⃣ Correlation Analysis
+Strong Positive Correlation: cp with target (more chest pain types linked with disease presence).
+Strong Negative Correlation: thalach with target (higher heart rate → lower risk).
+Heatmap shows oldpeak, ca, and exang have noticeable positive correlations with heart disease presence.
+
+6️⃣ Outlier Detection
+Outliers detected in chol (very high cholesterol levels) and trestbps (resting blood pressure).
+Retained for modeling as they could represent real-world extreme cases.
+
+✅ Conclusion from EDA:
+
+Features like chest pain type, maximum heart rate, ST depression, and number of major vessels are strong predictors.
+
+7️⃣ Key Insights from EDA
+Middle-aged individuals (40–60 years) are at highest risk.
+Higher cholesterol and resting BP are moderately linked with disease.
+Chest pain type and max heart rate are among the most influential features.
+No severe data imbalance, making the dataset ideal for classification algorithms.
+
